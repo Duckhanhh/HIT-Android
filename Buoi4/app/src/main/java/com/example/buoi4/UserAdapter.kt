@@ -9,21 +9,21 @@ import androidx.recyclerview.widget.RecyclerView
 
 class UserAdapter(
     val userList : MutableList<User> = mutableListOf()
-) : RecyclerView.Adapter<UserAdapter.userVIewHolder>() {
-    class userVIewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+) : RecyclerView.Adapter<UserAdapter.userViewHolder>() {
+    class userViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvUsername = itemView.findViewById<TextView>(R.id.name)
         val tvAddress = itemView.findViewById<TextView>(R.id.address)
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): userVIewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): userViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false)
-        return userVIewHolder(view)
+        return userViewHolder(view)
     }
 
     override fun getItemCount(): Int = userList.size
 
-    override fun onBindViewHolder(holder: userVIewHolder, position: Int) {
+    override fun onBindViewHolder(holder: userViewHolder, position: Int) {
         holder.tvUsername.text = userList[position].username
         holder.tvAddress.text = userList[position].address
 
@@ -32,7 +32,7 @@ class UserAdapter(
         }
         holder.tvAddress.setOnClickListener {
             userList.removeAt(position)
-            notifyDataSetChanged() // tbao data bi thay doi
+            notifyDataSetChanged()
         }
     }
 }
