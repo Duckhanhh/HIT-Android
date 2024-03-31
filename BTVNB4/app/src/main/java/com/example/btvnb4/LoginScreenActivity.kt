@@ -9,7 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.btvnb4.databinding.LoginScreenBinding
 
-class LoginActivity : AppCompatActivity() {
+class LoginScreenActivity : AppCompatActivity() {
     private val binding by lazy { LoginScreenBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

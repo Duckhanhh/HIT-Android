@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     //    private lateinit var binding: ActivityMainBinding
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
-    val list = mutableListOf<User>(
+    val list : MutableList<User> = mutableListOf(
         User("NKS", "asd"),
         User("NOK", "asdasd"),
         User("NKSdf", "asdpppppp"),
