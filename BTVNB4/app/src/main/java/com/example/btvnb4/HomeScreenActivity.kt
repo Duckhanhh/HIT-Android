@@ -9,14 +9,13 @@ import com.example.btvnb4.databinding.ActivityHomeScreenBinding
 
 class HomeScreenActivity : AppCompatActivity() {
     private val binding by lazy { ActivityHomeScreenBinding.inflate(layoutInflater) }
-    val list: MutableList<User> = mutableListOf(
-        User("Nguyen Duc Khanh", "Duckk", "123321"),
-        User("Nguyen Thi B", "BBBBB", "123333")
-    )
-    private val userAdapter = UserAdapter(list)
+//    val list: MutableList<User> = mutableListOf(
+//        User("Nguyen Duc Khanh", "Duckk", "123321"),
+//        User("Nguyen Thi B", "BBBBB", "123333")
+//    )
+    private val userAdapter = UserAdapter(Data.list)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(binding.root)
 
         val fullname = intent.getStringExtra("fullname")
@@ -25,7 +24,7 @@ class HomeScreenActivity : AppCompatActivity() {
 
         if (fullname != null && username != null && password != null) {
             val user = User(fullname, username, password)
-            list.add(user)
+            Data.list.add(user)
         }
         binding.recyclerView.adapter = userAdapter
         binding.recyclerView.layoutManager =

@@ -13,7 +13,6 @@ class LoginScreenActivity : AppCompatActivity() {
     private val binding by lazy { LoginScreenBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(binding.root)
 
         val login_bt: Button = binding.btDangNhap
@@ -41,7 +40,7 @@ class LoginScreenActivity : AppCompatActivity() {
 
     fun checkList(checkun: String, checkpw: String): Boolean {
         val user_checking = User("", checkun, checkpw)
-        val users = HomeScreenActivity().list
+        val users = Data.list
         for (user in users) {
             if (user_checking.username == user.username && user_checking.password == user.password) {
                 return true
