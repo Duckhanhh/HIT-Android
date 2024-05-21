@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "895662708029",
+    "project_id": "buoi10-deba8",
+    "storage_bucket": "buoi10-deba8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895662708029:android:b7e49230e6334c7a6b2154",
+        "android_client_info": {
+          "package_name": "com.example.buoi10"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKuX29FyB8M0ahKkWnyciwKxCyNJFBLjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,13 @@
+<resources>
+    <!-- Custom Toolbar style -->
+    <style name="CustomToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/CustomToolbarTitleText</item>
+    </style>
+
+    <!-- Custom Toolbar title text style -->
+    <style name="CustomToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

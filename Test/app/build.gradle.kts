@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
 }
 
 android {
@@ -48,4 +49,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // Room components
+    implementation ("androidx.room:room-ktx:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
+    androidTestImplementation ("androidx.room:room-testing:2.6.1")
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation("com.google.android.material:material:1.4.0")
 }

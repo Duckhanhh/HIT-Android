@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ItemAdapter(
-    val noteList: MutableList<Note> = mutableListOf(),
+    val noteList: List<Note> = mutableListOf(),
 ) : RecyclerView.Adapter<ItemAdapter.itemViewHolder>() {
 
     class itemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

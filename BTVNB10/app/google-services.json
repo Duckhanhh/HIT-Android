@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "591148770518",
+    "project_id": "btvnb10",
+    "storage_bucket": "btvnb10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591148770518:android:83ae54e927fcbd6a0f9577",
+        "android_client_info": {
+          "package_name": "com.example.btvnb10"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi3sEVHDKFvr6B5eeIbpVA5j5pReBLtiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

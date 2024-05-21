@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="15dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/nameId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ho va ten: "
+        android:textSize="25dp"/>
+    <TextView
+        android:id="@+id/AgeId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tuoi: "
+        android:textSize="25dp"/>
+    <TextView
+        android:id="@+id/AddressId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dia chi: "
+        android:textSize="25dp"/>
+
+</LinearLayout>

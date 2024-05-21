@@ -3,28 +3,35 @@ package com.example.test
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.commit
 import com.example.test.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-    private val itemAdapter = ItemAdapter(DataItem.list)
+    private val allNoteFragment = AllNoteFragment()
+    private val favouriteFragment = FavouriteFragment()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.recyclerView.adapter = itemAdapter
-        binding.recyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        supportFragmentManager.commit {
+            replace(binding.fragmentContainer.id, allNoteFragment)
+            setReorderingAllowed(true)
+        }
 
         binding.tvFavorite.setOnClickListener {
-
+            supportFragmentManager.commit {
+                replace(binding.fragmentContainer.id, favouriteFragment)
+                setReorderingAllowed(true)
+            }
         }
 
         binding.tvAllnote.setOnClickListener {
-            binding.recyclerView.adapter = itemAdapter
-            binding.recyclerView.layoutManager =
-                LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            supportFragmentManager.commit {
+                replace(binding.fragmentContainer.id, allNoteFragment)
+                setReorderingAllowed(true)
+            }
         }
 
         binding.btAddnote.setOnClickListener {
