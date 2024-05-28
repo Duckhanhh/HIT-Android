@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         User("NOK", "asdasd"),
         User("NKSdf", "asdpppppp"),
     )
-    private val userAdapter = UserAdapter(list)
+        private val userAdapter = UserAdapter(list)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

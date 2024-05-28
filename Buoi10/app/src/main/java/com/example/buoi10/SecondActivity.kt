@@ -29,13 +29,9 @@ class SecondActivity : AppCompatActivity() {
                 .get()
                 .addOnSuccessListener {document ->
                     val user = document.toObject<User>()
-
                     binding.edtUsername.setText(user?.username.toString())
                     binding.edtAge.setText(user?.age.toString())
                     binding.edtAddress.setText(user?.address.toString())
-                }
-                .addOnFailureListener {
-
                 }
         }
 
@@ -75,6 +71,12 @@ class SecondActivity : AppCompatActivity() {
                     }
                     println(userList)
                 }
+        }
+
+        binding.btnClearText.setOnClickListener {
+            binding.edtUsername.clearText()
+            binding.edtAddress.clearText()
+            binding.edtAge.clearText()
         }
     }
 }

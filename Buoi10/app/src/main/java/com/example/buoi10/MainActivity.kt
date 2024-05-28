@@ -1,5 +1,6 @@
 package com.example.buoi10
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -14,9 +15,12 @@ import com.google.firebase.auth.auth
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     private val auth = Firebase.auth
+    private val loadingDialog by lazy { Dialog(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        loadingDialog.setContentView(R.layout.dialog_loading)
 
         if (auth.currentUser?.uid != null){
             startActivity(Intent(this, SecondActivity::class.java))
@@ -43,9 +47,11 @@ class MainActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val email = binding.edtEmail.text.toString()
             val password = binding.edtPassword.text.toString()
+            loadingDialog.show()
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
+                        loadingDialog.dismiss()
                         if (task.isSuccessful) {
                             startActivity(Intent(this, SecondActivity::class.java))
                         } else {
@@ -58,5 +64,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnGetIUD.setOnClickListener {
             Toast.makeText(this, auth.currentUser?.uid.toString(), Toast.LENGTH_SHORT).show()
         }
+
+
     }
 }

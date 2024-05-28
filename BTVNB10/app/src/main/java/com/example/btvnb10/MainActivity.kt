@@ -41,5 +41,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finishAffinity()
         }
+
+        binding.btnStatistics.setOnClickListener {
+            startActivity(Intent(this, DetailActivity::class.java))
+        }
     }
 }
