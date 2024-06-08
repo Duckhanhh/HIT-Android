@@ -20,8 +20,8 @@ class DetailActivity2 : AppCompatActivity() {
         val icon = intent.getIntExtra("ICON", 0)
         var total = 0
 
-        binding.recyclerView.adapter = detailAdapter
-        binding.recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.recyclerView2.adapter = detailAdapter
+        binding.recyclerView2.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         database.collection("Items")
             .whereEqualTo("icon", icon)
@@ -53,7 +53,6 @@ class DetailActivity2 : AppCompatActivity() {
                         total += item.amount!!
                     }
                     detailAdapter.setList(itemList)
-
                 } else {
                     Log.e("DetailActivity2", "No documents found in $collectionName")
                 }

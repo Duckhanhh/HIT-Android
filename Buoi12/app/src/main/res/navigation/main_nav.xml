@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.buoi12.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.buoi12.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:enterAnim="@anim/anim_zoom_out"
+            app:exitAnim="@anim/anim_zoom_out"
+            app:popEnterAnim="@anim/anim_zoom_in"
+            app:popExitAnim="@anim/anim_zoom_in" />
+    </fragment>
+</navigation>
