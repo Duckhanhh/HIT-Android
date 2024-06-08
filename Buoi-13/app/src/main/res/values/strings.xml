@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Buoi13</string>
+    <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="add_new_note">Add new note</string>
+</resources>
